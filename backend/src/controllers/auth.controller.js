@@ -17,9 +17,9 @@ const createSendToken = (user, statusCode, res) => {
     expires: new Date(
       Date.now() + 30 * 24 * 60 * 60 * 1000 // 30 days
     ),
-    httpOnly: true, // Prevents XSS attacks
-    sameSite: 'lax',
-    secure: process.env.NODE_ENV === 'production' // HTTPS only in production
+    httpOnly: true,
+    secure: true,
+    sameSite: "none",
   };
 
   // Send token in cookie
