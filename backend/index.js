@@ -27,7 +27,7 @@ const app = express();
 app.use(helmet());
 app.use(
   cors({
-    origin: ["http://localhost:5173", "https://badminton-fsd.vercel.app/login"], // Your frontend URL
+    origin: ["http://localhost:5173", "https://badminton-fsd.vercel.app"], // Your frontend URL
     credentials: true, // Allow cookies
   })
 );
